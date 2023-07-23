@@ -1,10 +1,24 @@
 import { forwardRef } from "react";
 //Icons
 import { SiGooglemaps, SiGithub, SiLinkedin } from "react-icons/si";
+import { CurrentBreakpoint } from "../utils/breakpoints";
+import Photo from "./photo";
 
 const Hero = forwardRef((props, ref) => {
+  const breakpoint = CurrentBreakpoint();
+
+  const includedBreakpoints = ["xs", "sm", "md"];
+
   return (
-    <div ref={ref} className="flex h-80 w-full justify-center items-center">
+    <div
+      ref={ref}
+      className="flex flex-col h-[calc(100vh-80px)] lg:h-80 w-full justify-center items-center"
+    >
+      {includedBreakpoints.includes(breakpoint) && (
+        <div className="flex justify-center pb-12">
+          <Photo />
+        </div>
+      )}
       <div className="prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none">
         <h1 className="flex justify-center items-center md:hidden">Hello,</h1>
         <h1 className="flex justify-center items-center md:hidden">
@@ -32,14 +46,20 @@ const Hero = forwardRef((props, ref) => {
             target="_blank"
             aria-label="GitHub"
           >
-            <SiGithub size={32} className="text-white lg:hover:text-green-500" />
+            <SiGithub
+              size={32}
+              className="text-white lg:hover:text-green-500"
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/andrempacheco97"
             target="_blank"
             aria-label="LinkedIn"
           >
-            <SiLinkedin size={32} className="text-white lg:hover:text-green-500" />
+            <SiLinkedin
+              size={32}
+              className="text-white lg:hover:text-green-500"
+            />
           </a>
         </p>
       </div>
