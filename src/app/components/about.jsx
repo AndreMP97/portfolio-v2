@@ -16,13 +16,16 @@ const About = forwardRef((props, ref) => {
     >
       <div className="flex flex-col lg:flex-row">
         <div className="prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none lg:w-2/3">
-          <h2 className="flex border-b-4 w-full justify-center items-center lg:justify-start border-zinc-500 pb-2">About me</h2>
+          <h2 className="flex flex-col justify-center items-center">
+            About me
+            <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
+          </h2>
           <p>
-            I&#39;m a software developer living in Portugal. I
-            enjoy creating applications that can be used by everyone on the
-            internet. My interest in software development started at a young age
-            when I decided to inspect the elements of a website, which led me to
-            learn the basics of HTML and CSS.
+            I&#39;m a software developer living in Portugal. I enjoy creating
+            applications that can be used by everyone on the internet. My
+            interest in software development started at a young age when I
+            decided to inspect the elements of a website, which led me to learn
+            the basics of HTML and CSS.
           </p>
           <p>
             Fast forwarding to 2018, I enrolled in a Bachelor of Science in
@@ -40,7 +43,7 @@ const About = forwardRef((props, ref) => {
             improve my skills to stay up-to-date with the industry.
           </p>
           <strong>
-            Here are a few technologies I&#39;ve been working with recently:
+            A few technologies I&#39;ve been working with recently:
           </strong>
         </div>
         {!excludedBreakpoints?.includes(breakpoint) && (
