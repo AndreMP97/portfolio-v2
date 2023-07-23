@@ -40,7 +40,7 @@ export default function Home() {
       ) : (
         <>
           <Navbar navLinks={navLinks} />
-          <main className="flex flex-col w-full mt-20 px-4 md:px-10 lg:px-12 xl:px-20">
+          <main className="flex flex-col w-full mt-20 px-4 md:px-10 lg:px-12 xl:px-20 overflow-y-scroll overflow-x-hidden">
             <Hero ref={heroRef} />
             <About ref={aboutRef} />
             <Experience ref={experienceRef} />

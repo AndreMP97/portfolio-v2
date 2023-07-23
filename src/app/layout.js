@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-poppins bg-zinc-900 overflow-y-scroll scroll-smooth scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-zinc-600 scrollbar-track-transparent 2xl:container 2xl:mx-auto">
+      <body className="font-poppins bg-zinc-900 scroll-smooth scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-zinc-600 scrollbar-track-transparent 2xl:container 2xl:mx-auto">
         {children}
       </body>
     </html>
