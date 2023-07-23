@@ -12,6 +12,8 @@ import {
   SiSvelte,
   SiTailwindcss,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import { CurrentBreakpoint } from "../utils/breakpoints";
 
 const Skills = () => {
   const icons = [
@@ -65,8 +67,27 @@ const Skills = () => {
     },
   ];
 
+  const breakpoint = CurrentBreakpoint();
+  const excludedBreakpoints = ["xs", "sm", "md"];
+
   return (
-    <div className="grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-y-8 mt-10">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      transition={{
+        duration: 1,
+        delay: excludedBreakpoints?.includes(breakpoint) ? 1 : 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+        amount: excludedBreakpoints?.includes(breakpoint) ? 0.2 : 0.8,
+      }}
+      className="grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-y-8 mt-10"
+    >
       {icons.map((item) => (
         <div
           key={item.name}
@@ -76,7 +97,7 @@ const Skills = () => {
           <p className="text-zinc-400">{item.name}</p>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
