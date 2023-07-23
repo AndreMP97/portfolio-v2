@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useState } from "react";
+import { forwardRef } from "react";
 import Skills from "./skills";
 import Photo from "./photo";
 import { CurrentBreakpoint } from "../utils/breakpoints";
@@ -8,7 +8,7 @@ const About = forwardRef((props, ref) => {
   const breakpoint = CurrentBreakpoint();
   const excludedBreakpoints = ["xs", "sm", "md"];
 
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section
@@ -132,7 +132,7 @@ const About = forwardRef((props, ref) => {
               opacity: 0,
             }}
             transition={{
-              delay: excludedBreakpoints?.includes(breakpoint) ? 1 : 5,
+              delay: 1,
               duration: 1,
             }}
             animate={

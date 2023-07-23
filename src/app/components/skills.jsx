@@ -86,7 +86,7 @@ const Skills = () => {
         once: true,
         amount: excludedBreakpoints?.includes(breakpoint) ? 0.2 : 0.8,
       }}
-      className="grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-y-8 mt-10"
+      className="grid grid-cols-3 gap-4 md:gap-8 lg:grid-cols-6 lg:gap-6 mt-12"
     >
       {icons.map((item) => (
         <div
