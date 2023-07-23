@@ -8,6 +8,7 @@ import { CSSTransition } from "react-transition-group";
 import { Squash as Hamburger } from "hamburger-react";
 import { RingLoader } from "react-spinners";
 import Experience from "./components/experience";
+import Footer from "./components/footer";
 
 export default function Home() {
   const navRef = useRef();
@@ -93,7 +94,7 @@ export default function Home() {
 
             {/* Mobile */}
             <div className="md:hidden">
-              <Hamburger size={32} toggled={nav} toggle={setNav} />
+              <Hamburger size={24} toggled={nav} toggle={setNav} />
             </div>
 
             <CSSTransition
@@ -138,11 +139,7 @@ export default function Home() {
             <div ref={workRef} className="h-screen"></div>
             <Contact ref={contactRef} />
           </main>
-          <footer className="flex justify-center items-center h-24 text-white lg:hover:text-green-500 md:px-10 lg:px-12 xl:px-20 border-t-2 border-zinc-500">
-            <a href="https://github.com/AndreMP97/portfolio" target="_blank">
-              MADE BY ANDRÉ PACHECO
-            </a>
-          </footer>
+          <Footer />
         </>
       )}
     </>
