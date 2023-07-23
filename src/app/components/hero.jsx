@@ -10,8 +10,9 @@ const Hero = forwardRef((props, ref) => {
   const includedBreakpoints = ["xs", "sm", "md"];
 
   return (
-    <div
+    <section
       ref={ref}
+      id="hero"
       className="flex flex-col h-[calc(100vh-80px)] lg:h-80 w-full justify-center items-center"
     >
       {includedBreakpoints.includes(breakpoint) && (
@@ -63,7 +64,7 @@ const Hero = forwardRef((props, ref) => {
           </a>
         </p>
       </div>
-    </div>
+    </section>
   );
 });
 
