@@ -7,6 +7,7 @@ import Contact from "./components/contact";
 import { CSSTransition } from "react-transition-group";
 import { Squash as Hamburger } from "hamburger-react";
 import { RingLoader } from "react-spinners";
+import Experience from "./components/experience";
 
 export default function Home() {
   const navRef = useRef();
@@ -61,7 +62,7 @@ export default function Home() {
             className="flex h-20 w-full max-w-screen-2xl p-4 md:px-10 lg:px-12 xl:px-20 justify-between items-center bg-zinc-900 text-white fixed top-0 z-50"
           >
             <button
-              onClick={() => handleClick()}
+              onClick={() => !nav && handleClick()}
               className="font-greatVibes text-2xl text-white -rotate-12 lg:hover:text-green-500 lgh"
             >
               AP
@@ -133,7 +134,7 @@ export default function Home() {
           <main className="flex flex-col w-full mt-20 px-4 md:px-10 lg:px-12 xl:px-20">
             <Hero ref={heroRef} />
             <About ref={aboutRef} />
-            <div ref={experienceRef} className="h-screen"></div>
+            <Experience ref={experienceRef} />
             <div ref={workRef} className="h-screen"></div>
             <Contact ref={contactRef} />
           </main>
