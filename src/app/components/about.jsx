@@ -8,10 +8,6 @@ const About = forwardRef((props, ref) => {
 
   const excludedBreakpoints = ["xs", "sm", "md"];
 
-  useEffect(() => {
-    console.log("debug:", breakpoint);
-  }, [breakpoint]);
-
   return (
     <section
       ref={ref}
