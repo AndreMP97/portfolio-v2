@@ -108,7 +108,7 @@ const Hero = forwardRef((props, ref) => {
           }}
           className="flex justify-center items-center text-zinc-500"
         >
-          Front-end Developer
+          Software Developer
         </motion.h2>
         <motion.p
           initial={{
