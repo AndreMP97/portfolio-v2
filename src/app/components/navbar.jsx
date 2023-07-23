@@ -85,7 +85,7 @@ const Navbar = ({ navLinks }) => {
       transition={{
         duration: 1,
       }}
-      className="flex h-20 w-full max-w-screen-2xl p-4 md:px-10 lg:px-12 xl:px-20 justify-between items-center text-white fixed top-0 z-50 backdrop-blur-md"
+      className="flex h-20 w-full max-w-screen-2xl p-4 md:px-10 lg:px-12 xl:px-20 justify-between items-center bg-zinc-900 text-white fixed top-0 z-50"
     >
       <button
         onClick={() => !nav && handleClick()}
