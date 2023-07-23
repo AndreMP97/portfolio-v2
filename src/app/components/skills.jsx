@@ -5,12 +5,12 @@ import {
   SiGithub,
   SiHtml5,
   SiJavascript,
-  SiMysql,
-  SiPhp,
+  SiJirasoftware,
+  SiNextdotjs,
   SiPython,
   SiReact,
+  SiSvelte,
   SiTailwindcss,
-  SiNextdotjs,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -36,6 +36,10 @@ const Skills = () => {
       icon: <SiNextdotjs size={64} className="m-auto text-zinc-400" />,
     },
     {
+      name: "Svelte",
+      icon: <SiSvelte size={64} className="m-auto text-zinc-400" />,
+    },
+    {
       name: "Bootstrap",
       icon: <SiBootstrap size={64} className="m-auto text-zinc-400" />,
     },
@@ -44,10 +48,13 @@ const Skills = () => {
       icon: <SiTailwindcss size={64} className="m-auto text-zinc-400" />,
     },
     {
-      name: "MySQL",
-      icon: <SiMysql size={64} className="m-auto text-zinc-400" />,
+      name: "GitHub",
+      icon: <SiGithub size={64} className="m-auto text-zinc-400" />,
     },
-    { name: "PHP", icon: <SiPhp size={64} className="m-auto text-zinc-400" /> },
+    {
+      name: "Jira",
+      icon: <SiJirasoftware size={64} className="m-auto text-zinc-400" />,
+    },
     {
       name: "Python",
       icon: <SiPython size={64} className="m-auto text-zinc-400" />,
@@ -55,10 +62,6 @@ const Skills = () => {
     {
       name: "C/C++",
       icon: <SiCplusplus size={64} className="m-auto text-zinc-400" />,
-    },
-    {
-      name: "GitHub",
-      icon: <SiGithub size={64} className="m-auto text-zinc-400" />,
     },
   ];
 
