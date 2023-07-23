@@ -123,12 +123,9 @@ const Hero = forwardRef((props, ref) => {
             delay: 2.5,
             duration: 1,
           }}
+          className="flex justify-center items-center"
         >
-          <a
-            className="flex justify-center items-center text-white lg:hover:text-green-500 no-underline"
-            href="https://en.wikipedia.org/wiki/Porto"
-            target="_blank"
-          >
+          <a className="flex justify-center items-center text-white lg:hover:text-green-500 no-underline">
             <SiGooglemaps size={32} className="mr-2" />
             Porto, Portugal
           </a>
