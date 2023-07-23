@@ -15,8 +15,9 @@ const Contact = forwardRef((props, ref) => {
               Let&#39;s get in touch
             </h2>
             <p>
-              Even though I&#39;m not currently looking for any new opportunities, my
-              inbox is always open.
+              Even though I&#39;m not actively looking for any new
+              opportunities, my inbox is always open. Feel free to reach out if you
+              have any questions, a proposal, or simply want to connect.
             </p>
             <a
               href="mailto:andre.m.pacheco.97@gmail.com"
