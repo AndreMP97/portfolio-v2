@@ -9,7 +9,7 @@ const Contact = forwardRef((props, ref) => {
       id="contact"
       className="flex flex-col justify-center items-center w-full pt-24 pb-24"
     >
-      <div className="flex flex-col justify-center items-center prose prose-invert prose-sm md:prose-base 2xl:prose-xl max-w-none w-full md:w-10/12 lg:w-8/12">
+      <div className="flex flex-col justify-center items-center prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none w-full md:w-10/12 lg:w-8/12">
         <motion.h2
           initial={{
             y: -100,
