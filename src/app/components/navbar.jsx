@@ -129,7 +129,7 @@ const Navbar = ({ navLinks }) => {
               <motion.li variants={itemVariants} className="pt-4">
                 <a
                   href="https://drive.google.com/uc?export=download&id=1EDfXmMCBuh2VwYUhCVJdmFSGd-8FQpa_"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="h-full mt-6 border-2 border-zinc-100 py-2 px-4 rounded-md text-white"
                 >
                   Resume
@@ -153,7 +153,7 @@ const Navbar = ({ navLinks }) => {
           </ul>
           <a
             href="https://drive.google.com/uc?export=download&id=1EDfXmMCBuh2VwYUhCVJdmFSGd-8FQpa_"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <button className="border-2 border-zinc-100 py-2 px-4 rounded-md text-white lg:hover:text-green-500 lg:hover:border-green-500">
               Resume

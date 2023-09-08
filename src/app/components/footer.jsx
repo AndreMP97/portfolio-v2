@@ -23,6 +23,7 @@ export const Footer = () => {
       <a
         href="https://github.com/AndreMP97/portfolio"
         target="_blank"
+        rel="noopener noreferrer"
         className="flex h-full w-full justify-center items-center uppercase"
       >
         Created by André Pacheco

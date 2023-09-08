@@ -125,7 +125,12 @@ const Hero = forwardRef((props, ref) => {
           }}
           className="flex justify-center items-center"
         >
-          <a className="flex justify-center items-center text-white lg:hover:text-green-500 no-underline cursor-pointer">
+          <a
+            href="https://g.co/kgs/Z2htXa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center text-white lg:hover:text-green-500 no-underline cursor-pointer"
+          >
             <SiGooglemaps size={32} className="mr-2" />
             Porto, Portugal
           </a>
@@ -148,6 +153,7 @@ const Hero = forwardRef((props, ref) => {
           <a
             href="https://github.com/AndreMP97"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub"
           >
             <SiGithub
@@ -158,6 +164,7 @@ const Hero = forwardRef((props, ref) => {
           <a
             href="https://www.linkedin.com/in/andrempacheco97"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <SiLinkedin
