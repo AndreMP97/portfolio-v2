@@ -8,6 +8,7 @@ import About from "./components/about";
 import Experience from "./components/experience";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Projects from "./components/projects";
 
 export default function Home() {
   const heroRef = useRef();
@@ -16,7 +17,7 @@ export default function Home() {
   const workRef = useRef();
   const contactRef = useRef();
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navLinks = [
     { name: "About", ref: aboutRef },
@@ -44,7 +45,7 @@ export default function Home() {
             <Hero ref={heroRef} />
             <About ref={aboutRef} />
             <Experience ref={experienceRef} />
-            <div ref={workRef} className="h-screen"></div>
+            <Projects ref={workRef} />
             <Contact ref={contactRef} />
           </main>
           <Footer />

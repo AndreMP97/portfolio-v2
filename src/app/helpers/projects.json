@@ -1,0 +1,35 @@
+[
+  {
+    "image": "/custojusto.png",
+    "title": "CustoJusto.pt",
+    "description": "To be completed",
+    "external": {
+      "website": "https://www.custojusto.pt"
+    }
+  },
+  {
+    "image": "/custojustopro.png",
+    "title": "CustoJusto Pro",
+    "description": "To be completed",
+    "external": {
+      "website": "https://pro.custojusto.pt"
+    }
+  },
+  {
+    "image": "/weatherapp.png",
+    "title": "Weather Forecast",
+    "description": "Small personal project that fetches the current weather as well as the forecast for the next day.\n The goal of this project was to stay up-to-date with the React framework and further my knowledge on how to handle third-party APIs.\n The main difficulties with this project were on how to use two different APIs and handle the data between them.",
+    "external": {
+      "repo": "https://github.com/AndreMP97/weather-app",
+      "website": "https://andremp97.github.io/weather-app/"
+    }
+  },
+  {
+    "image": "/pesta.png",
+    "title": "Managment Platform",
+    "description": "This was a full-stack project done as part of my degree as a final evaluation.\n The objectives were for companies to send their internship proposals, for teachers to propose and manage projects, for degree directors to manage the internships, and for students to apply for any of the proposals.\n To complete this project, research was done to choose which were the best software languages and frameworks to achieve the proposed objectives.",
+    "external": {
+      "repo": "https://github.com/AndreMP97/PESTA"
+    }
+  }
+]
