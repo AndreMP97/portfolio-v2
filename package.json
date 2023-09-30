@@ -9,16 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fontsource/great-vibes": "^5.0.11",
+    "@fontsource/great-vibes": "^5.0.12",
     "@fontsource/poppins": "^5.0.8",
     "@vercel/analytics": "^1.0.2",
-    "autoprefixer": "10.4.15",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
+    "autoprefixer": "10.4.16",
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.3",
     "framer-motion": "^10.16.4",
     "hamburger-react": "^2.5.0",
-    "next": "13.4.19",
-    "postcss": "8.4.29",
+    "next": "13.5.3",
+    "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "sharp": "^0.32.5",
+    "sharp": "^0.32.6",
     "tailwind-scrollbar": "^3.0.5"
   }
 }
