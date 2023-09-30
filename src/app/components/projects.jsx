@@ -12,7 +12,7 @@ const Projects = forwardRef((props, ref) => {
       ref={ref}
       className="flex flex-col h-auto w-full justify-start md:justify-center items-start lg:items-center pt-24"
     >
-      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none w-full pb-10">
+      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg max-w-none w-full pb-10">
         <motion.h2
           initial={{
             y: -100,

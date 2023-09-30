@@ -17,7 +17,7 @@ const About = forwardRef((props, ref) => {
       className="flex flex-col min-h-screen w-full pt-24"
     >
       <div className="flex flex-col lg:flex-row">
-        <div className="prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none lg:w-2/3">
+        <div className="prose prose-invert prose-base lg:prose-lg max-w-none lg:w-2/3">
           <motion.h2
             initial={{
               y: -100,

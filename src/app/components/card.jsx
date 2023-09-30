@@ -75,7 +75,7 @@ const Card = ({ index, project }) => {
         )}
       </div>
       <div
-        className={`flex flex-col prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none lg:w-3/5 ${
+        className={`flex flex-col prose prose-invert prose-base lg:prose-lg max-w-none lg:w-3/5 ${
           isEven(index) ? "lg:order-2" : "lg:order-1"
         }`}
       >

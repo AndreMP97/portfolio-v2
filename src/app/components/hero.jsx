@@ -36,7 +36,7 @@ const Hero = forwardRef((props, ref) => {
           <Photo />
         </motion.div>
       )}
-      <div className="prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none">
+      <div className="prose prose-invert prose-base lg:prose-lg max-w-none">
         {mobileBreakpoints?.includes(breakpoint) ? (
           <>
             <motion.h1

@@ -9,7 +9,7 @@ const Experience = forwardRef((props, ref) => {
       ref={ref}
       className="flex flex-col h-screen md:h-auto w-full justify-start md:justify-center items-start lg:items-center pt-24"
     >
-      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none w-full pb-10">
+      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg max-w-none w-full pb-10">
         <motion.h2
           initial={{
             y: -100,
@@ -73,7 +73,7 @@ const Experience = forwardRef((props, ref) => {
               <Image src={CustoJusto} alt="CustoJusto logo" />
             </motion.a>
           </div>
-          <div className="prose prose-invert prose-base lg:prose-lg 2xl:prose-xl max-w-none md:w-4/6">
+          <div className="prose prose-invert prose-base lg:prose-lg max-w-none md:w-4/6">
             <motion.h3
               initial={{
                 y: 100,
