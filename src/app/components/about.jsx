@@ -56,11 +56,11 @@ const About = forwardRef((props, ref) => {
               }
             }
           >
-            I&#39;m a software developer living in Portugal. I enjoy creating
-            applications that can be used by everyone on the internet. My
-            interest in software development started at a young age when I
-            decided to inspect the elements of a website, which led me to learn
-            the basics of HTML and CSS.
+            I'm a dedicated software developer based in Portugal, passionate
+            about crafting web applications for audiences. My journey
+            into the world of software development began at a young age when I
+            delved into inspecting website elements, sparking my curiosity for
+            HTML and CSS.
           </motion.p>
           <motion.p
             initial={{
@@ -78,10 +78,10 @@ const About = forwardRef((props, ref) => {
               }
             }
           >
-            Fast forwarding to 2018, I enrolled in a Bachelor of Science in
-            Electrical and Computer Engineering, which combines the study of
-            electrical engineering and computer science. During my degree, I
-            became familiar with a multitude of subjects such as mathematics,
+            Fast forward to 2018, I embarked on a Bachelor of Science in
+            Electrical and Computer Engineering, a degree that seamlessly blends
+            electrical engineering and computer science. My academic journey
+            exposed me to a diverse range of subjects, including mathematics,
             physics, programming, electronics, instrumentation, automation,
             control, telecommunications, energy systems, and management.
           </motion.p>
@@ -101,11 +101,12 @@ const About = forwardRef((props, ref) => {
               }
             }
           >
-            Today, with the subjects that I learned during my B.Sc., I have the
-            ability to design and develop software applications. Furthermore,
-            I&#39;m an avid learner who enjoys experimenting with new
-            technologies during my free time, and I&#39;m constantly striving to
-            improve my skills to stay up-to-date with the industry.
+            Nowadays, bolstered by the knowledge I acquired during my B.Sc.
+            studies and my hands-on experience, I have the expertise to craft
+            innovative software applications. Beyond my professional pursuits, I
+            enjoy exploring cutting-edge technologies in my free time. My
+            dedication to skill refinement serves as my approach to staying in
+            sync with the constantly evolving industry.
           </motion.p>
           <motion.strong
             initial={{
@@ -122,7 +123,7 @@ const About = forwardRef((props, ref) => {
               amount: "all",
             }}
           >
-            A few technologies I&#39;ve been working with recently:
+            A few technologies I've been working with recently:
           </motion.strong>
         </div>
         {!excludedBreakpoints?.includes(breakpoint) && (
