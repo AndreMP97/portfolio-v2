@@ -5,10 +5,6 @@ import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 
 const Card = ({ index, project }) => {
-  const arrDescription = (project?.description || "")
-    .replace(/\\n/g, "\n")
-    .split("\n");
-
   const isEven = (n) => n % 2 === 0;
 
   const ExternalLink = ({ href, label, className, children }) => {
@@ -80,9 +76,7 @@ const Card = ({ index, project }) => {
         }`}
       >
         <h3>{project?.title}</h3>
-        {arrDescription?.map((description, index) => (
-          <p key={`paragraph-${index}`}>{description}</p>
-        ))}
+        <p key={`paragraph-${index}`}>{project?.description}</p>
         <div className="flex space-x-4">
           {renderWebsiteLink()}
           {renderRepoLink()}

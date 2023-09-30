@@ -2,7 +2,7 @@
   {
     "image": "/custojusto.png",
     "title": "CustoJusto.pt",
-    "description": "To be completed",
+    "description": "CustoJusto is a prominent online classifieds platform in Portugal, for users to effortlessly post both free and premium advertisements spanning diverse categories, such as vehicles, vehicle parts, and real estate. My primary involvement centered on actively contributing to the transition from the initial Blocket-based system to a Next.js environment. Throughout this phase, there was a focus on enhancing the user experience and extending the platform's capabilities.",
     "external": {
       "website": "https://www.custojusto.pt"
     }
@@ -10,7 +10,7 @@
   {
     "image": "/custojustopro.png",
     "title": "CustoJusto Pro",
-    "description": "To be completed",
+    "description": "CustoJusto developed a web application designed for premium advertisers, offering a robust platform with detailed statistical insights and effortless ad management capabilities. With the goal of standardizing the company's framework, I played a significant role in the conversion of the initial Svelte-based platform into a unified Next.js environment. During this transition, the team seized the opportunity to not only enhance the current functionalities but also introduce new innovative features.",
     "external": {
       "website": "https://pro.custojusto.pt"
     }
@@ -18,7 +18,7 @@
   {
     "image": "/weatherapp.png",
     "title": "Weather Forecast",
-    "description": "Small personal project that fetches the current weather as well as the forecast for the next day.\n The goal of this project was to stay up-to-date with the React framework and further my knowledge on how to handle third-party APIs.\n The main difficulties with this project were on how to use two different APIs and handle the data between them.",
+    "description": "The project revolves around retrieving real-time weather conditions and one-day forecasts. Its primary objective was to delve deeper into the intricacies of the React framework while incorporating a CSS framework like Bootstrap CSS. Another crucial goal was to elevate proficiency in efficiently managing third-party APIs. This undertaking presented unique challenges, primarily centered on integrating two distinct APIs and ensuring the smooth management of data flow between them.",
     "external": {
       "repo": "https://github.com/AndreMP97/weather-app",
       "website": "https://andremp97.github.io/weather-app/"
@@ -27,7 +27,7 @@
   {
     "image": "/pesta.png",
     "title": "Managment Platform",
-    "description": "This was a full-stack project done as part of my degree as a final evaluation.\n The objectives were for companies to send their internship proposals, for teachers to propose and manage projects, for degree directors to manage the internships, and for students to apply for any of the proposals.\n To complete this project, research was done to choose which were the best software languages and frameworks to achieve the proposed objectives.",
+    "description": "This comprehensive full-stack project served as the culminating assessment for my degree, aiming to streamline the process for companies to submit internship proposals, empower teachers to suggest and oversee projects, enable degree directors to efficiently manage internships, and empower students to easily apply for available opportunities. Successful execution required meticulous research to identify the most fitting programming languages and frameworks to align with and effectively achieve these goals.",
     "external": {
       "repo": "https://github.com/AndreMP97/PESTA"
     }
