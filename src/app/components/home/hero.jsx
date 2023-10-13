@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { CurrentBreakpoint } from "../utils/breakpoints";
+import { CurrentBreakpoint } from "../../utils/breakpoints";
 import Photo from "./photo";
 //Icons
 import { SiGooglemaps, SiGithub, SiLinkedin } from "react-icons/si";
@@ -71,7 +71,7 @@ const Hero = forwardRef((props, ref) => {
               }}
               className="flex justify-center items-center"
             >
-              I&#39;m André Pacheco
+              André Pacheco
             </motion.h1>
           </>
         ) : (
@@ -90,7 +90,7 @@ const Hero = forwardRef((props, ref) => {
             }}
             className="hidden md:flex justify-center items-center"
           >
-            Hello, I&#39;m André Pacheco
+            André Pacheco
           </motion.h1>
         )}
         <motion.h2

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CustoJusto from "../../assets/custojusto.png";
+import CustoJusto from "../../../assets/custojusto.png";
 
 const Experience = forwardRef((props, ref) => {
   return (
@@ -9,7 +9,7 @@ const Experience = forwardRef((props, ref) => {
       ref={ref}
       className="flex flex-col h-screen md:h-auto w-full justify-start md:justify-center items-start lg:items-center pt-24"
     >
-      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg max-w-none w-full pb-10">
+      <div className="flex flex-col justify-start items-center max-w-none w-full pb-10">
         <motion.h2
           initial={{
             y: -100,
@@ -27,7 +27,7 @@ const Experience = forwardRef((props, ref) => {
             once: true,
             amount: 0.4,
           }}
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center text-white mb-3 font-semibold text-2xl lg:text-3xl"
         >
           My experience
           <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
@@ -49,7 +49,7 @@ const Experience = forwardRef((props, ref) => {
             once: true,
             amount: 0.2,
           }}
-          className="flex flex-col md:flex-row h-auto w-full lg:w-3/4 bg-zinc-800 rounded-md p-6 space-y-6 md:space-y-0 md:space-x-6"
+          className="flex flex-col md:flex-row h-auto w-full lg:w-3/4 rounded-md p-6 space-y-6 md:space-y-0 md:space-x-6"
         >
           <div className="flex justify-center items-center md:w-2/6 px-4">
             <motion.a

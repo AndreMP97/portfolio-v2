@@ -13,7 +13,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import { CurrentBreakpoint } from "../utils/breakpoints";
+import { CurrentBreakpoint } from "../../utils/breakpoints";
 
 const Skills = () => {
   const icons = [

@@ -1,18 +1,20 @@
 // Resources
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 // Sub-components
 import Card from "./card";
 // Data
-import data from "../helpers/projects.json";
+import data from "../../helpers/projects.json";
 
 const Projects = forwardRef((props, ref) => {
+  const [isActive, setIsActive] = useState(null);
+
   return (
     <section
       ref={ref}
       className="flex flex-col h-auto w-full justify-start md:justify-center items-start lg:items-center pt-24"
     >
-      <div className="flex flex-col justify-start items-center prose prose-invert prose-base lg:prose-lg max-w-none w-full pb-10">
+      <div className="flex flex-col justify-start items-center max-w-none w-full pb-10">
         <motion.h2
           initial={{
             y: -100,
@@ -30,14 +32,20 @@ const Projects = forwardRef((props, ref) => {
             once: true,
             amount: 0.4,
           }}
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center text-white mb-3 font-semibold text-2xl lg:text-3xl"
         >
-          Projects
+          Projects I've worked on
           <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
         </motion.h2>
-        <div className="flex flex-col space-y-8">
+        <div className="w-5/6 lg:w-full grid lg:grid-cols-2 grid-flow-row">
           {data?.map((project, index) => (
-            <Card key={index} index={index} project={project} />
+            <Card
+              key={index + 1}
+              index={index + 1}
+              project={project}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
           ))}
         </div>
       </div>
