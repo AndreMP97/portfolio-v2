@@ -32,7 +32,7 @@ const Navbar = ({ navLinks, isMobile }) => {
   };
 
   useEffect(() => {
-    toggleOverflow();
+    toggleOverflow(nav);
     if (nav) {
       setBorder(false);
     } else {

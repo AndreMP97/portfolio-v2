@@ -9,7 +9,7 @@ const WorkCard = ({ index, project, isActive, setIsActive }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    toggleOverflow();
+    toggleOverflow(isOpen);
   }, [isOpen]);
 
   return (
