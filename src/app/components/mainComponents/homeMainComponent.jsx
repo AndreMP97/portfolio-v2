@@ -1,13 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import Navbar from "../navbar/navbar";
-import Hero from "../home/hero";
-import About from "../home/about";
-import Experience from "../home/experience";
-import Projects from "../home/projects";
-import Contact from "../home/contact";
-import Footer from "../footer/footer";
+import Navbar from "@components/navbar/navbar";
+import Hero from "@components/home/hero/hero";
+import About from "@components/home/about/about";
+import Experience from "@components/home/experience/experience";
+import Projects from "@components/home/work/work";
+import Contact from "@components/home/contact/contact";
+import Footer from "@components/footer/footer";
 
 const HomeMainComponent = ({ isMobile }) => {
   const heroRef = useRef();
@@ -17,16 +17,16 @@ const HomeMainComponent = ({ isMobile }) => {
   const contactRef = useRef();
 
   const navLinks = [
-    { name: "About", ref: aboutRef },
-    { name: "Experience", ref: experienceRef },
-    { name: "Work", ref: workRef },
-    { name: "Contact", ref: contactRef },
+    { name: "About", ref: aboutRef, section: "#about" },
+    { name: "Experience", ref: experienceRef, section: "#exprience" },
+    { name: "Work", ref: workRef, section: "#work" },
+    { name: "Contact", ref: contactRef, section: "#contact" },
   ];
 
   return (
     <>
       <Navbar navLinks={navLinks} isMobile={isMobile} />
-      <main className="flex flex-col w-full mt-20 px-4 md:px-10 lg:px-12 xl:px-20">
+      <main className="flex flex-col w-full mt-20 px-4">
         <Hero ref={heroRef} />
         <About ref={aboutRef} />
         <Experience ref={experienceRef} />

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DesktopNavbar = ({ navLinks, handleClick }) => {
   return (
     <div className="hidden md:flex flex-row justify-center items-center space-x-8">
@@ -6,9 +8,11 @@ const DesktopNavbar = ({ navLinks, handleClick }) => {
           <li
             key={index}
             onClick={() => handleClick(link?.ref)}
-            className="cursor-pointer text-white lg:hover:text-green-500"
+            className="text-white lg:hover:text-green-500"
           >
-            {link?.name}
+            <Link href={link?.section} scroll={false}>
+              {link?.name}
+            </Link>
           </li>
         ))}
       </ul>

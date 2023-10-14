@@ -17,7 +17,7 @@ export const Footer = () => {
         once: true,
         amount: 0.2,
       }}
-      className="flex flex-col h-20 w-full text-white lg:hover:text-green-500 md:px-10 lg:px-12 xl:px-20"
+      className="flex flex-col h-20 w-full text-white lg:hover:text-green-500 px-4"
     >
       <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
       <a

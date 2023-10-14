@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Foto from "../../../assets/foto.jpg";
+import Foto from "@assets/foto.jpg";
 
 const Photo = () => {
   return (

@@ -2,11 +2,16 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useScroll } from "@utils/useScroll";
 // Dynamic imports
 const DesktopNavbar = dynamic(() => import("./desktop/desktopNavbar"));
 const MobileNavbar = dynamic(() => import("./mobile/mobileNavbar"));
 
 const Navbar = ({ navLinks, isMobile }) => {
+  const pathname = usePathname();
+
   const [nav, setNav] = useState(false);
   const [border, setBorder] = useState(false);
 
@@ -18,23 +23,24 @@ const Navbar = ({ navLinks, isMobile }) => {
     }
   };
 
-  useEffect(() => {
-    if (nav) {
-      document.body.style.overflow = "hidden";
+  const handleScroll = () => {
+    if (window?.scrollY > 25 && !border) {
+      setBorder(true);
     } else {
-      document.body.style.overflow = "auto";
+      setBorder(false);
+    }
+  };
+
+  useEffect(() => {
+    useScroll();
+    if (nav) {
+      setBorder(false);
+    } else {
+      handleScroll();
     }
   }, [nav]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window?.scrollY > 25 && !border) {
-        setBorder(true);
-      } else {
-        setBorder(false);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -55,13 +61,15 @@ const Navbar = ({ navLinks, isMobile }) => {
       transition={{
         duration: 1,
       }}
-      className="flex h-20 w-full max-w-screen-2xl p-4 md:px-10 lg:px-12 xl:px-20 justify-between items-center bg-zinc-900 text-white fixed top-0 z-50"
+      className="container flex justify-between items-center h-20 w-full p-4 bg-zinc-900 text-white fixed top-0 z-40"
     >
       <button
         onClick={() => !nav && handleClick()}
-        className="font-greatVibes text-2xl text-white -rotate-12 lg:hover:text-green-500 lgh"
+        className="font-greatVibes text-2xl text-white -rotate-12 lg:hover:text-green-500"
       >
-        AP
+        <Link href={pathname} scroll={false}>
+          AP
+        </Link>
       </button>
 
       {isMobile ? (

@@ -1,4 +1,5 @@
 // Resources
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 
@@ -60,9 +61,11 @@ const MobileNavbar = ({ navLinks, nav, setNav, handleClick }) => {
                 handleClick(link?.ref);
                 setNav((state) => !state);
               }}
-              className="cursor-pointer text-white text-lg lg:hover:text-green-500"
+              className="text-white text-lg lg:hover:text-green-500"
             >
-              {link?.name}
+              <Link href={link?.section} scroll={false}>
+                {link?.name}
+              </Link>
             </motion.li>
           ))}
           <motion.li variants={itemVariants} className="pt-4">

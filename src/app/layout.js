@@ -1,7 +1,7 @@
 // Resources
 import { Analytics } from "@vercel/analytics/react";
 // Styles
-import "./globals.css";
+import "@styles/globals.scss";
 // Fonts
 import "@fontsource/great-vibes";
 import "@fontsource/poppins";
@@ -14,8 +14,8 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en" className="overflow-x-hidden">
-      <body className="font-poppins bg-zinc-900 scroll-smooth scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-zinc-600 scrollbar-track-transparent 2xl:container 2xl:mx-auto">
+    <html lang="en">
+      <body className="container mx-auto font-poppins bg-zinc-900 scroll-smooth scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-zinc-600 scrollbar-track-transparent overflow-x-hidden overflow-y-scroll">
         {children}
         <Analytics />
       </body>

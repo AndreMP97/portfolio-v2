@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { CurrentBreakpoint } from "../../utils/breakpoints";
+import { CurrentBreakpoint } from "../../../utils/breakpoints";
 import Photo from "./photo";
 //Icons
 import { SiGooglemaps, SiGithub, SiLinkedin } from "react-icons/si";
@@ -39,23 +39,6 @@ const Hero = forwardRef((props, ref) => {
       <div className="prose prose-invert prose-base lg:prose-lg max-w-none">
         {mobileBreakpoints?.includes(breakpoint) ? (
           <>
-            <motion.h1
-              initial={{
-                y: -100,
-                opacity: 0,
-              }}
-              animate={{
-                y: 0,
-                opacity: 1,
-              }}
-              transition={{
-                delay: 1,
-                duration: 1,
-              }}
-              className="flex justify-center items-center"
-            >
-              Hello,
-            </motion.h1>
             <motion.h1
               initial={{
                 y: 100,

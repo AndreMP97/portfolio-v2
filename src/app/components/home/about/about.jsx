@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import Skills from "./skills";
-import Photo from "./photo";
-import { CurrentBreakpoint } from "../../utils/breakpoints";
+import Photo from "../hero/photo";
+import { CurrentBreakpoint } from "../../../utils/breakpoints";
 import { motion, useInView } from "framer-motion";
 
 const About = forwardRef((props, ref) => {

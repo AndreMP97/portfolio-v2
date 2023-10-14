@@ -1,12 +1,13 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CustoJusto from "../../../assets/custojusto.png";
+import CustoJusto from "@assets/custojusto.png";
 
 const Experience = forwardRef((props, ref) => {
   return (
     <section
       ref={ref}
+      id="experience"
       className="flex flex-col h-screen md:h-auto w-full justify-start md:justify-center items-start lg:items-center pt-24"
     >
       <div className="flex flex-col justify-start items-center max-w-none w-full pb-10">

@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 // Component
 import HomeMainComponent from "./components/mainComponents/homeMainComponent";
 // Utils
-import { getDevice } from "@/app/utils/getDevice";
+import { getDevice } from "@utils/getDevice";
 
 const HomePage = () => {
   const userAgent = String(headers().get("user-agent"));
