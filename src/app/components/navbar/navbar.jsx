@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useScroll } from "@utils/useScroll";
+import { toggleOverflow } from "@utils/toggleOverflow";
 // Dynamic imports
 const DesktopNavbar = dynamic(() => import("./desktop/desktopNavbar"));
 const MobileNavbar = dynamic(() => import("./mobile/mobileNavbar"));
@@ -32,7 +32,7 @@ const Navbar = ({ navLinks, isMobile }) => {
   };
 
   useEffect(() => {
-    useScroll();
+    toggleOverflow();
     if (nav) {
       setBorder(false);
     } else {

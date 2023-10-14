@@ -3,13 +3,13 @@ import Image from "next/image";
 import Modal from "@components/home/work/modal";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useScroll } from "@utils/useScroll";
+import { toggleOverflow } from "@utils/toggleOverflow";
 
 const WorkCard = ({ index, project, isActive, setIsActive }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    useScroll();
+    toggleOverflow();
   }, [isOpen]);
 
   return (

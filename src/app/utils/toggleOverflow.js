@@ -1,4 +1,4 @@
-export const useScroll = () => {
+export const toggleOverflow = () => {
   const bodyClassList = document.body.classList;
 
   if (bodyClassList.contains("overflow-y-scroll")) {
