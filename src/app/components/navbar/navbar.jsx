@@ -19,7 +19,7 @@ const Navbar = ({ navLinks, isMobile }) => {
     if (ref) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     } else {
-      if(nav) {
+      if (nav) {
         setNav(false);
       }
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -52,9 +52,7 @@ const Navbar = ({ navLinks, isMobile }) => {
   }, []);
 
   return (
-    <nav
-      className="container flex justify-between items-center h-20 w-full p-4 bg-zinc-900 text-white fixed top-0 z-40"
-    >
+    <nav className="flex lg:hidden justify-between items-center h-20 w-full p-4 bg-zinc-900 text-white fixed top-0 z-40">
       <button
         onClick={() => handleClick()}
         className="font-greatVibes text-2xl text-white -rotate-12 lg:hover:text-green-500"
@@ -64,7 +62,14 @@ const Navbar = ({ navLinks, isMobile }) => {
         </Link>
       </button>
 
-      {isMobile ? (
+      <MobileNavbar
+        navLinks={navLinks}
+        nav={nav}
+        setNav={setNav}
+        handleClick={handleClick}
+      />
+
+      {/*isMobile ? (
         <MobileNavbar
           navLinks={navLinks}
           nav={nav}
@@ -73,7 +78,7 @@ const Navbar = ({ navLinks, isMobile }) => {
         />
       ) : (
         <DesktopNavbar navLinks={navLinks} handleClick={handleClick} />
-      )}
+      )*/}
 
       {border && (
         <div className="absolute bottom-0 h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />

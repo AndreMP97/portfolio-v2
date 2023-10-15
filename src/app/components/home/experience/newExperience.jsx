@@ -4,14 +4,14 @@ import { forwardRef } from "react";
 
 const NewExperience = forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="experience" className="flex flex-col w-full text-white pt-24">
+    <section ref={ref} id="experience" className="flex flex-col w-full text-white mt-24">
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         My experience
       </h2>
       <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
-      <div className="flex flex-col lg:flex-row w-full mt-5 lg:mt-6 lg:gap-6">
-        <div className="flex flex-col w-full lg:w-1/3 gap-5 lg:gap-6">
-          <p className="flex justify-center lg:justify-start items-center order-2 lg:order-1 h-8">
+      <div className="flex flex-col md:flex-row w-full mt-5 lg:mt-6 md:gap-6 px-4">
+        <div className="flex flex-col w-full md:w-1/2 gap-5 md:gap-6">
+          <p className="flex justify-center md:justify-start items-center order-2 md:order-1 h-8">
             March 2023 - Present
           </p>
           <a
@@ -22,7 +22,7 @@ const NewExperience = forwardRef((props, ref) => {
             <Image src={CustoJusto} alt="CustoJusto logo" />
           </a>
         </div>
-        <div className="flex flex-col w-full lg:w-2/3">
+        <div className="flex flex-col w-full md:w-1/2">
           <h3 className="font-semibold text-xl lg:text-2xl mb-5 lg:mb-6">
             Front-end Developer
           </h3>

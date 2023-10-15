@@ -3,7 +3,7 @@ import { SiGmail } from "react-icons/si";
 
 const NewContact = forwardRef((props, ref) => {
   return (
-    <section ref={ref} id="contact" className="flex flex-col w-full text-white pt-24">
+    <section ref={ref} id="contact" className="flex flex-col w-full text-white mt-24">
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         Let's get in touch
       </h2>

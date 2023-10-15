@@ -10,13 +10,13 @@ const NewWork = forwardRef((props, ref) => {
     <section
       ref={ref}
       id="work"
-      className="flex flex-col w-full text-white pt-24"
+      className="flex flex-col w-full text-white mt-24"
     >
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         What I've worked on
       </h2>
       <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
-      <div className="w-full grid grid-flow-row">
+      <div className="w-full grid grid-flow-row gap-y-6">
         {data?.map((project, index) => (
           <NewCard
             key={index + 1}

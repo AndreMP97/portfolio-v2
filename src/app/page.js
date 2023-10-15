@@ -1,7 +1,7 @@
 // Resources
 import { headers } from "next/headers";
 // Component
-import HomeMainComponent from "./components/mainComponents/homeMainComponent";
+import HomeMainComponent from "@components/mainComponents/homeMainComponent";
 // Utils
 import { getDevice } from "@utils/getDevice";
 

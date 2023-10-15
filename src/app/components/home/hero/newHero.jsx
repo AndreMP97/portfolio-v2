@@ -34,7 +34,7 @@ const NewHero = forwardRef((props, ref) => {
           Porto, Portugal
         </a>
       </p>*/}
-      {!props?.isMobile && <SideBar navLinks={props?.navLinks} />}
+      <SideBar navLinks={props?.navLinks} isMobile={props?.isMobile} />
       <div className="flex w-full lg:h-full justify-center items-end space-x-4">
         <a
           href="https://github.com/AndreMP97"

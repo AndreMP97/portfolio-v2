@@ -13,7 +13,7 @@ const SideBar = ({ navLinks }) => {
   };
 
   return (
-    <div className="flex w-full justify-center">
+    <div className="hidden lg:flex w-full justify-center">
       <ul className="flex flex-col space-y-4">
         {navLinks?.map((link, index) => (
           <li
