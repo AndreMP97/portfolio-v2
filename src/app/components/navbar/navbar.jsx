@@ -19,6 +19,9 @@ const Navbar = ({ navLinks, isMobile }) => {
     if (ref) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     } else {
+      if(nav) {
+        setNav(false);
+      }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
@@ -49,22 +52,11 @@ const Navbar = ({ navLinks, isMobile }) => {
   }, []);
 
   return (
-    <motion.nav
-      initial={{
-        y: -100,
-        opacity: 0,
-      }}
-      animate={{
-        y: 0,
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
+    <nav
       className="container flex justify-between items-center h-20 w-full p-4 bg-zinc-900 text-white fixed top-0 z-40"
     >
       <button
-        onClick={() => !nav && handleClick()}
+        onClick={() => handleClick()}
         className="font-greatVibes text-2xl text-white -rotate-12 lg:hover:text-green-500"
       >
         <Link href={pathname} scroll={false}>
@@ -86,7 +78,7 @@ const Navbar = ({ navLinks, isMobile }) => {
       {border && (
         <div className="absolute bottom-0 h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
       )}
-    </motion.nav>
+    </nav>
   );
 };
 

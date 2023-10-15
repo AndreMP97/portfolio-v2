@@ -86,10 +86,18 @@ const WorkModal = ({ project, handleClose }) => {
             </div>
             <div className="h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-zinc-500 to-transparent mt-2" />
           </div>
-          <div className="flex">
-            <p className="my-5 lg:my-6 text-white text-base lg:text-lg">
+          <div className="flex flex-col text-white">
+            <p className="my-5 lg:my-6 text-base lg:text-lg">
               {project?.description}
             </p>
+            <small className="mb-5 lg:mb-6 text-xs lg:text-sm">
+              <span className="font-semibold mr-2">Stack:</span>
+              {project?.stack?.map((tech) => (
+                <span className="bg-zinc-700 rounded-full py-1 px-3 mr-2">
+                  {tech}
+                </span>
+              ))}
+            </small>
           </div>
           <div className="flex items-center space-x-4">
             <WebsiteLink />

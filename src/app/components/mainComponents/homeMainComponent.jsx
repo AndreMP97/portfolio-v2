@@ -8,6 +8,11 @@ import Experience from "@components/home/experience/experience";
 import Projects from "@components/home/work/work";
 import Contact from "@components/home/contact/contact";
 import Footer from "@components/footer/footer";
+import NewHero from "@components/home/hero/newHero";
+import NewAbout from "@components/home/about/newAbout";
+import NewExperience from "@components/home/experience/newExperience";
+import NewWork from "@components/home/work/newWork";
+import NewContact from "@components/home/contact/NewContact";
 
 const HomeMainComponent = ({ isMobile }) => {
   const heroRef = useRef();
@@ -25,7 +30,19 @@ const HomeMainComponent = ({ isMobile }) => {
 
   return (
     <>
-      <Navbar navLinks={navLinks} isMobile={isMobile} />
+      {isMobile && <Navbar navLinks={navLinks} isMobile={isMobile} />}
+      <header className="flex w-full lg:w-1/3 h-screen max-h-screen lg:py-20 lg:sticky lg:top-0 px-4 lg:px-0">
+        <NewHero isMobile={isMobile} navLinks={navLinks} />
+      </header>
+      <main className="flex flex-col w-full lg:w-2/3 lg:pt-20 px-4 lg:px-0">
+        <NewAbout ref={aboutRef} />
+        <NewExperience ref={experienceRef} />
+        <NewWork ref={workRef} />
+        <NewContact ref={contactRef} />
+        {!isMobile && <Footer />}
+      </main>
+      {isMobile && <Footer />}
+      {/*<Navbar navLinks={navLinks} isMobile={isMobile} />
       <main className="flex flex-col w-full mt-20 px-4">
         <Hero ref={heroRef} />
         <About ref={aboutRef} />
@@ -33,7 +50,7 @@ const HomeMainComponent = ({ isMobile }) => {
         <Projects ref={workRef} />
         <Contact ref={contactRef} />
       </main>
-      <Footer />
+  <Footer />*/}
     </>
   );
 };

@@ -1,9 +1,13 @@
 // Resources
 import Image from "next/image";
-import Modal from "@components/home/work/modal";
+import dynamic from "next/dynamic";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+// Utils
 import { toggleOverflow } from "@utils/toggleOverflow";
+// Dynamic imports
+// import Modal from "@components/home/work/modal";
+const Modal = dynamic(() => import("@components/home/work/modal"));
 
 const WorkCard = ({ index, project, isActive, setIsActive }) => {
   const [isOpen, setIsOpen] = useState(false);
