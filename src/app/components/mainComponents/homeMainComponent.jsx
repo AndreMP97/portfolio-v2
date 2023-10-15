@@ -12,7 +12,7 @@ import NewHero from "@components/home/hero/newHero";
 import NewAbout from "@components/home/about/newAbout";
 import NewExperience from "@components/home/experience/newExperience";
 import NewWork from "@components/home/work/newWork";
-import NewContact from "@components/home/contact/NewContact";
+import NewContact from "@components/home/contact/newContact";
 
 const HomeMainComponent = ({ isMobile }) => {
   const heroRef = useRef();
