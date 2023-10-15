@@ -31,4 +31,6 @@ const NewWork = forwardRef((props, ref) => {
   );
 });
 
+NewWork.displayName = "NewWork";
+
 export default NewWork;

@@ -34,4 +34,6 @@ const NewExperience = forwardRef((props, ref) => {
   );
 });
 
+NewExperience.displayName = "NewExperience";
+
 export default NewExperience;

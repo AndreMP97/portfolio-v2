@@ -27,4 +27,6 @@ const NewContact = forwardRef((props, ref) => {
   );
 });
 
+NewContact.displayName = "NewContact";
+
 export default NewContact;

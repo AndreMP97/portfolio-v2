@@ -35,4 +35,6 @@ const NewAbout = forwardRef((props, ref) => {
   );
 });
 
+NewAbout.displayName = "NewAbout";
+
 export default NewAbout;

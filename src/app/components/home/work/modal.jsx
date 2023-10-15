@@ -92,8 +92,8 @@ const WorkModal = ({ project, handleClose }) => {
             </p>
             <small className="mb-5 lg:mb-6 text-xs lg:text-sm">
               <span className="font-semibold mr-2">Stack:</span>
-              {project?.stack?.map((tech) => (
-                <span className="bg-zinc-700 rounded-full py-1 px-3 mr-2">
+              {project?.stack?.map((tech, index) => (
+                <span key={index} className="bg-zinc-700 rounded-full py-1 px-3 mr-2">
                   {tech}
                 </span>
               ))}

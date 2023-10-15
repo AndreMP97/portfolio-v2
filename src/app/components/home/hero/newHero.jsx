@@ -60,4 +60,6 @@ const NewHero = forwardRef((props, ref) => {
   );
 });
 
+NewHero.displayName = "NewHero";
+
 export default NewHero;
