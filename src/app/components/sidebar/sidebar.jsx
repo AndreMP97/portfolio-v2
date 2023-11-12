@@ -16,12 +16,12 @@ const SideBar = ({ navLinks }) => {
     <div className="hidden lg:flex w-full justify-center">
       <ul className="flex flex-col space-y-4">
         {navLinks?.map((link, index) => (
-          <li
-            key={index}
-            onClick={() => handleClick(link?.ref)}
-            className="text-white lg:hover:text-green-500"
-          >
-            <Link href={link?.section} scroll={false}>
+          <li key={index} className="text-white lg:hover:text-green-500">
+            <Link
+              href={link?.section}
+              scroll={false}
+              onClick={() => handleClick(link?.ref)}
+            >
               {link?.name}
             </Link>
           </li>
