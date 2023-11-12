@@ -1,14 +1,29 @@
+// Resources
+import { forwardRef, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 // Data
 import data from "@helpers/projects.json";
+// Sub-components
 import NewCard from "./newCard";
-import { forwardRef, useState } from "react";
 
 const NewWork = forwardRef((props, ref) => {
   const [isActive, setIsActive] = useState(null);
 
+  const [inViewRef, inView, entry] = useInView({ threshold: 0.5 });
+
+  useEffect(() => {
+    // console.log("inView NewWork:", inView);
+    if (inView) {
+      props?.setActiveSection(entry.target.id);
+    }
+  }, [inView, entry]);
+
   return (
     <section
-      ref={ref}
+      ref={(el) => {
+        ref.current = el;
+        inViewRef(el);
+      }}
       id="work"
       className="flex flex-col w-full text-white mt-24"
     >

@@ -1,7 +1,9 @@
 import Link from "next/link";
 
-const SideBar = ({ navLinks }) => {
-  const handleClick = (ref) => {
+const SideBar = ({ navLinks, activeSection }) => {
+  const handleClick = (ref, name) => {
+    if (name.toLowerCase() === activeSection) return;
+
     if (ref) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     } else {
@@ -16,11 +18,18 @@ const SideBar = ({ navLinks }) => {
     <div className="hidden lg:flex w-full justify-center">
       <ul className="flex flex-col space-y-4">
         {navLinks?.map((link, index) => (
-          <li key={index} className="text-white lg:hover:text-green-500">
+          <li
+            key={index}
+            className={`text-white ${
+              activeSection === link?.name?.toLowerCase()
+                ? `text-green-500`
+                : `hover:text-green-500`
+            }`}
+          >
             <Link
               href={link?.section}
               scroll={false}
-              onClick={() => handleClick(link?.ref)}
+              onClick={() => handleClick(link?.ref, link?.name)}
             >
               {link?.name}
             </Link>

@@ -1,9 +1,28 @@
-import { forwardRef } from "react";
+// Resources
+import { forwardRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+// Assets
 import { SiGmail } from "react-icons/si";
 
 const NewContact = forwardRef((props, ref) => {
+  const [inViewRef, inView, entry] = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    // console.log("inView NewContact:", inView);
+    if (inView) {
+      props?.setActiveSection(entry.target.id);
+    }
+  }, [inView, entry]);
+
   return (
-    <section ref={ref} id="contact" className="flex flex-col w-full text-white mt-24">
+    <section
+      ref={(el) => {
+        ref.current = el;
+        inViewRef(el);
+      }}
+      id="contact"
+      className="flex flex-col w-full text-white mt-24"
+    >
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         Let's get in touch
       </h2>

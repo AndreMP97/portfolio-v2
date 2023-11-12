@@ -1,10 +1,29 @@
+// Resources
+import { forwardRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+// Assets
 import CustoJusto from "@assets/custojusto.png";
-import { forwardRef } from "react";
 
 const NewExperience = forwardRef((props, ref) => {
+  const [inViewRef, inView, entry] = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    // console.log("inView NewExperience:", inView);
+    if (inView) {
+      props?.setActiveSection(entry.target.id);
+    }
+  }, [inView, entry]);
+
   return (
-    <section ref={ref} id="experience" className="flex flex-col w-full text-white mt-24">
+    <section
+      ref={(el) => {
+        ref.current = el;
+        inViewRef(el);
+      }}
+      id="experience"
+      className="flex flex-col w-full text-white mt-24"
+    >
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         My experience
       </h2>

@@ -1,9 +1,28 @@
-import { forwardRef } from "react";
+// Resources
+import { forwardRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+// Sub-components
 import NewSkills from "./newSkills";
 
 const NewAbout = forwardRef((props, ref) => {
+  const [inViewRef, inView, entry] = useInView({ threshold: 0.7 });
+
+  useEffect(() => {
+    // console.log("inView NewAbout:", inView);
+    if (inView) {
+      props?.setActiveSection(entry.target.id);
+    }
+  }, [inView, entry]);
+
   return (
-    <section ref={ref} id="about" className="flex flex-col w-full text-white">
+    <section
+      ref={(el) => {
+        ref.current = el;
+        inViewRef(el);
+      }}
+      id="about"
+      className="flex flex-col w-full text-white"
+    >
       <h2 className="font-semibold text-center text-2xl lg:text-3xl">
         About Me
       </h2>

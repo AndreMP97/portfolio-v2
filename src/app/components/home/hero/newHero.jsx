@@ -1,8 +1,11 @@
-import Foto from "@assets/foto.jpg";
-import SideBar from "@components/sidebar/sidebar";
-import Image from "next/image";
+// Resources
 import { forwardRef } from "react";
-import { SiGithub, SiGooglemaps, SiLinkedin } from "react-icons/si";
+import Image from "next/image";
+// Sub-components
+import SideBar from "@components/sidebar/sidebar";
+// Assets
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import Foto from "@assets/foto.jpg";
 
 const NewHero = forwardRef((props, ref) => {
   return (
@@ -34,7 +37,11 @@ const NewHero = forwardRef((props, ref) => {
           Porto, Portugal
         </a>
       </p>*/}
-      <SideBar navLinks={props?.navLinks} isMobile={props?.isMobile} />
+      <SideBar
+        navLinks={props?.navLinks}
+        isMobile={props?.isMobile}
+        activeSection={props?.activeSection}
+      />
       <div className="flex w-full lg:h-full justify-center items-end space-x-4">
         <a
           href="https://github.com/AndreMP97"
