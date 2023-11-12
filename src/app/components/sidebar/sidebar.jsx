@@ -20,10 +20,10 @@ const SideBar = ({ navLinks, activeSection }) => {
         {navLinks?.map((link, index) => (
           <li
             key={index}
-            className={`text-white ${
+            className={`${
               activeSection === link?.name?.toLowerCase()
                 ? `text-green-500`
-                : `hover:text-green-500`
+                : `text-white hover:text-green-500`
             }`}
           >
             <Link
