@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="container flex h-[calc(100dvh-80px)] items-center">
       <div className="w-2/3">
-        <h1>I'm André Pacheco</h1>
+        <h1>I&apos;m André Pacheco</h1>
         <h2>Front-end Developer</h2>
       </div>
       <div className="flex justify-center w-1/3">
