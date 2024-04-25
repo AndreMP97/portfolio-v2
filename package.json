@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/great-vibes": "^5.0.20",
+    "@fontsource/poppins": "^5.0.14",
     "next": "13.5.6",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18",
